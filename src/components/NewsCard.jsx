@@ -49,9 +49,12 @@ const NewsCard = ({ item }) => {
           <Typography 
             variant="h7" 
             component="div" 
-            sx={{ textAlign: 'left' }}
+            sx={{ 
+              textAlign: 'left',
+              color: 'text.disabled' 
+            }}
           >
-            De {item.source.name}
+          {item.source.name}
           </Typography>
           
           

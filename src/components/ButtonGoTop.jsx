@@ -5,7 +5,7 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import "../App.css";
 
-export default function ButtonGoTop() {
+const ButtonGoTop = () => {
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -37,3 +37,5 @@ export default function ButtonGoTop() {
     </>
   );
 }
+
+export default ButtonGoTop;

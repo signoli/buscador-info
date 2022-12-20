@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="foot-cont">
 
             <p>
-               Proyecto Buscador Informatorio 2022
+               BuscadorNewsAPI 2022
             </p>
 
             <span>
