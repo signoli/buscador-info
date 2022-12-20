@@ -1,0 +1,166 @@
+.App {
+  text-align: center;
+}
+
+a,
+p,
+h1 {
+  color: #000000;
+  text-decoration: none;
+}
+.nav-container {
+  width: 100%;
+  position: fixed;
+  background-color: #ffffff !important;
+  box-shadow: 0 0px 5px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid transparent;
+}
+.custom-navbar {
+  max-width: 800px;
+  height: 50px !important;
+  margin: auto;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.custom-navbar :hover {
+  color: #1352c7;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.home,
+.search-page,
+.error-404 {
+  min-width: 100%;
+  min-height: calc(100vh - 100px);
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #ffffff;
+}
+
+
+.MuiOutlinedInput-input {
+  color: rgb(63, 63, 63) !important;
+}
+
+.navbar-search {
+  align-items: center;
+  margin-right: 2em;
+  cursor: pointer;
+}
+
+.card-news {
+  align-items: center;
+  background-color: rgba(23, 146, 207, 0.1);
+  margin: 20px;
+}
+
+.card-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.container-info {
+  padding: 0 1.8rem 0 1.8rem;
+}
+
+.container-tag {
+  align-items: center;
+  background-color: rgba(33, 37, 41, 0.1);
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+}
+
+.alert {
+  padding: 1.8rem;
+  width: 100%;
+}
+
+.container-alert {
+  padding: 0 1.8rem 0 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.pagination {
+  display: flex;
+  margin: 0;
+  height: 4rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.page-link {
+  color: #000;
+}
+
+.page-item.active .page-link {
+  color: #fff;
+  background-color: rgb(33, 37, 41);
+  border-color: rgb(33, 37, 41);
+}
+
+.container-go-top {
+  position: fixed !important;
+  bottom: 7rem;
+  right: 14rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: 0.5s !important;
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 860px) {
+  .home h1 {
+    font-size: 2.5em;
+  }
+  .home p {
+    font-size: 0.7em;
+  }
+}
+
+footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:40px;
+  width:100%;
+}
+
+footer a, p {
+  color: rgb(171, 171, 171);
+}
+
+
+.foot-cont {
+  padding: 8px;
+  max-width: 800px;
+  background:rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.title {
+  padding: 40px;
+}
