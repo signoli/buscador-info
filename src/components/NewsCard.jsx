@@ -1,10 +1,10 @@
 //Componente que renderiza la tarjeta de noticia
-
-import Card from "@mui/material/Card";
+import Button from "@mui/material/Button";
 import CardActions from "@mui/material/CardActions";
+import Card from "@mui/material/Card";
+import Box from '@mui/material/Box';
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const NewsCard = ({ item }) => {
@@ -19,55 +19,21 @@ const NewsCard = ({ item }) => {
 
   return (
     <>
-      <Card variant="outlined" sx={{ maxWidth: 700 }} className="card-news">
-        {item.urlToImage ? (
-          <CardMedia component="img" image={item.urlToImage} alt="imagen" />
-        ) : (
-          <CardMedia
-            component="img"
-            image="https://t4.ftcdn.net/jpg/04/00/24/31/360_F_400243185_BOxON3h9avMUX10RsDkt3pJ8iQx72kS3.jpg"
-            alt="imagen"
-          />
-        )}
-
-        <CardContent>
-          
-          <Typography 
-            gutterBottom 
-            variant="h5" 
-            component="div"
-            sx={{ 
-              textAlign: 'left',
-              textTransform: 'uppercase',
-              fontWeight: 'bold'
-            }}
-          >
-            {item.title}
+    <Card sx={{ display: 'flex', maxWidth: 800, maxHeight:300, m: 2}}>
+      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ flex: '1 0 auto' }}>
+          <Typography component="div" variant="h5" sx={{ textAlign: 'left' }}>
+          {item.title}
           </Typography>
-
-
-          <Typography 
-            variant="h7" 
-            component="div" 
-            sx={{ 
-              textAlign: 'left',
-              color: 'text.disabled' 
-            }}
-          >
+          <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left', color: 'text.disabled'}}>
           {item.source.name}
           </Typography>
-          
-          
-          <Typography 
-            variant="body2" 
-            color="text.secondary" 
-            sx={{ textAlign: 'left' }}
-          >
-            {item.description}
-          </Typography>
 
-        </CardContent>
+          <Typography variant="subtitle1" color="text.secondary" component="div" sx={{ textAlign: 'left' }}>
+         {item.description}
+          </Typography>
         
+        </CardContent>
         <CardActions className="card-footer">
           
           <Button size="small" href={item.url} target="_blank">
@@ -79,9 +45,19 @@ const NewsCard = ({ item }) => {
           </Typography>
 
         </CardActions>
-      </Card>
+
+      </Box>
+      <CardMedia
+        component="img"
+        sx={{ width: 250 }}
+        image={item.urlToImage}
+        alt="imagen"
+      />
+    </Card>
     </>
   );
 }
 
 export default NewsCard;
+
+

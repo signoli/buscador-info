@@ -1,8 +1,9 @@
 //Componente que renderiza una noticia
 
-import NewsCard from "./NewsCard";
+import NewsCard from "./NewsCard.jsx";
 import { Alert } from "react-bootstrap";
 import "../App.css";
+import React from "react";
 
 const News = ({ page, pageSize, news, totalResults, maxResults }) => {
   const finalNews = totalResults - pageSize * (page - 1);
@@ -28,15 +29,15 @@ const News = ({ page, pageSize, news, totalResults, maxResults }) => {
 
   return (
     <>
-      <div className="container noticia" role="news">
-        <div className="container-info">{messageResults()}</div>
+      <div className="container noticia">
+        <div className="container-info">{messageResults}</div>
         {news && news.length > 0 ? (
           news.map((item, index) => {
             return <NewsCard item={item} key={index} />;
           })
         ) : (
           <div className="container-alert">
-            <Alert variant="danger">{messageAlert}</Alert>
+            <Alert variant="danger"> {messageAlert} </Alert>
           </div>
         )}
       </div>

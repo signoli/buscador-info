@@ -11,7 +11,7 @@ const NewsList = ({ search }) => {
   const [news, setNews] = useState([]);
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
-  const [maxResults, setMaxResults] = useState(false);
+  const [maxResults, setMaxResults] = useState(true);
   const pageSize = 10;
   const seteartotalPages = () => {
     if (totalResults % pageSize === 0) {
@@ -39,7 +39,7 @@ const NewsList = ({ search }) => {
   useEffect(() => {
     if (search) {
       getNoticiasDesdeServicio(search, page, pageSize);
-    }
+    } 
   }, [page, search]);
 
   if (loading) {
